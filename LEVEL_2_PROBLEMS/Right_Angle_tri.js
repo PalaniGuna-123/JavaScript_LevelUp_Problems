@@ -7,8 +7,8 @@ function printRightAngleTriangle(n) {
         console.log(row); // Print the current row
     }
 }
-
 printRightAngleTriangle(5);
+
 
 function right(n){
     for(i=1;i<=n;i++){
@@ -19,6 +19,7 @@ function right(n){
         console.log(row);
         
     }
-
+    
 }
 right(4)
+
