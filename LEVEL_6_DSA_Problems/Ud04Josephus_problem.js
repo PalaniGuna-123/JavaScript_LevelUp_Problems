@@ -26,3 +26,32 @@ function jose(n, k) {
 };
 console.log(jose(7,3));
 
+function  jose(n, k) {
+    let arr = Array.from({length: n}, (_, i) => i + 1);
+
+    function helper(arr, startIndex) {
+        if (arr.length === 1) {
+            return arr[0];
+        }
+        let indexToRemove = (startIndex + k - 1) % arr.length;
+        arr.splice(indexToRemove, 1);
+        return helper(arr, indexToRemove);
+    }
+
+    return helper(arr, 0);
+};
+console.log(jose(5,2)); // output 3
+
+
+function survivor(n, k) {
+    function josephus(n) {
+        if (n === 1) {
+            return 0;
+        }
+        return (josephus(n - 1) + k) % n;
+    }
+
+    return josephus(n) + 1;
+};
+console.log(survivor(6,5));
+
