@@ -6,12 +6,12 @@
 function sortedSquarredArray(array) {
     let newArray = new Array(array.length).fill(0);
     for (let i = 0; i < array.length; i++) {
-        newArray[i] = array[i] * array[i];  // Squaring each element
+        newArray[i] = array[i] * array[i]; 
     }
-    newArray.sort((a, b) => a - b);  // Sorting the array of squared numbers
+    newArray.sort((a, b) => a - b);  
     return newArray;
 }
-console.log(sortedSquarredArray([12,-6,-7,-4]));//n log Space complexity O of n
+console.log(sortedSquarredArray([12,-6,-7,-4]));//n log Space complexity O of 
 
 
 // Method two
@@ -34,5 +34,7 @@ function effective(arr){
     return newArray;
 }
 console.log(effective([-3,-4,-8,9]));
+
+
 
 

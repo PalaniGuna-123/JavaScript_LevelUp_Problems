@@ -33,3 +33,18 @@ function monotonic(arr){
 }
 console.log(monotonic([1,9,3,4,4,]));
 
+function monotonic(arr){
+    if(arr.length===0){
+        return true;
+    }
+    let first=arr[0]
+    let last=arr[arr.length-1]
+    if(first===last){
+        for(let i=0;i<arr.length;i++){
+            if(arr[i+1]!==arr[i]){
+                return false;
+            }
+        }
+    }
+}
+
